@@ -232,7 +232,7 @@ get_parent_expr() ->
 extend_recv(Clauses, Cont) ->
     [erl_syntax:clause(
        [erl_syntax:tuple([erl_syntax:atom('EXIT'),
-                          erl_syntax:variable('__FSM_Parent'),
+                          erl_syntax:variable('__FSM_Parent2'),
                           erl_syntax:variable('__FSM_Reason')])],
        [],
        [erl_syntax:application(

@@ -696,7 +696,7 @@ format_status(Opt, StatusData) ->
                       Name
               end,
     Header = lists:concat(["Status for plain_fsm ", NameTag]),
-    Log = sys:get_debug(log, Debug, []),
+    Log = sys:get_log(Debug),
     Specific =
         case erlang:function_exported(Mod, format_status, 2) of
             true ->
